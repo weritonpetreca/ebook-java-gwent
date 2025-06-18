@@ -1,4 +1,4 @@
-package Cap01;
+package cap01;
 /**
  * MedalhaoPersonalizado.java
  *

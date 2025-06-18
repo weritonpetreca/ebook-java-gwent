@@ -1,4 +1,4 @@
-package Cap01;
+package cap01;
 
 /**
  * MedalhaoPersonalizado.java
@@ -236,7 +236,12 @@ public class MedalhaoPersonalizadoTerminado {
     public static void pausarExecucao() {
         System.out.print("Pressione Enter para continuar...");
         try {
-            System.in.read();
+            while (System.in.read() != '\n') {
+                /*Aguarda até que o usuário pressione Enter
+                 Como o System.in.read() consome apenas um único caractere, e quando pressionamos Enter ele manda
+                 tanto um '\r' quanto um '\n', rodamos ele até consumir o '\n' (quebra de linha) e não afetar
+                 a proxima leitura do Scanner.*/
+            }
         } catch (IOException e) {
             // Ignora erro de I/O na pausa
         }

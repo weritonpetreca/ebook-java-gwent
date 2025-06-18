@@ -8,7 +8,7 @@
  */
 
 // 2. DECLARAÇÃO DE PACKAGE (Opcional para arquivos simples)
-package Cap01;
+package cap01;
 
 // 3. IMPORTS (Importações de bibliotecas externas)
 import java.time.LocalDateTime;
@@ -38,7 +38,7 @@ public class ExemploCompletoTerminado {
     public static final int NIVEL_MAXIMO = 100;
 
     // Lista estática para armazenar todos os aprendizes criados
-    private static List<Cap01.ExemploCompletoTerminado> todosAprendizes = new ArrayList<>();
+    private static List<cap01.ExemploCompletoTerminado> todosAprendizes = new ArrayList<>();
 
     // 8. CONSTRUTOR(ES)
     /**
@@ -82,7 +82,7 @@ public class ExemploCompletoTerminado {
         exibirCabecalho();
 
         // Criando instância da classe com dados pré-definidos
-        Cap01.ExemploCompletoTerminado aprendiz = new Cap01.ExemploCompletoTerminado("Geralt", 99, "Kaer Morhen", 95);
+        cap01.ExemploCompletoTerminado aprendiz = new cap01.ExemploCompletoTerminado("Geralt", 99, "Kaer Morhen", 95);
         todosAprendizes.add(aprendiz);
 
         System.out.println("🎯 Demonstração com aprendiz pré-cadastrado:");
@@ -194,7 +194,7 @@ public class ExemploCompletoTerminado {
         }
 
         // Criar novo aprendiz e adicionar à lista
-        Cap01.ExemploCompletoTerminado novoAprendiz = new Cap01.ExemploCompletoTerminado(nome, nivel, escola, idade);
+        cap01.ExemploCompletoTerminado novoAprendiz = new cap01.ExemploCompletoTerminado(nome, nivel, escola, idade);
         todosAprendizes.add(novoAprendiz);
 
         System.out.println("\n✅ Aprendiz cadastrado com sucesso!");
@@ -236,7 +236,7 @@ public class ExemploCompletoTerminado {
         String nomeBusca = scanner.nextLine().toLowerCase();
 
         boolean encontrado = false;
-        for (Cap01.ExemploCompletoTerminado aprendiz : todosAprendizes) {
+        for (cap01.ExemploCompletoTerminado aprendiz : todosAprendizes) {
             if (aprendiz.getNomeAprendiz().toLowerCase().contains(nomeBusca)) {
                 System.out.println("\n✅ APRENDIZ ENCONTRADO:");
                 System.out.println("─".repeat(30));
@@ -266,7 +266,7 @@ public class ExemploCompletoTerminado {
         // Listar aprendizes disponíveis
         System.out.println("📋 Aprendizes disponíveis:");
         for (int i = 0; i < todosAprendizes.size(); i++) {
-            Cap01.ExemploCompletoTerminado aprendiz = todosAprendizes.get(i);
+            cap01.ExemploCompletoTerminado aprendiz = todosAprendizes.get(i);
             System.out.println((i + 1) + ". " + aprendiz.getNomeAprendiz() +
                     " (Nível " + aprendiz.getNivelHabilidade() + ")");
         }
@@ -276,7 +276,7 @@ public class ExemploCompletoTerminado {
         scanner.nextLine(); // Consumir quebra de linha
 
         if (indice >= 0 && indice < todosAprendizes.size()) {
-            Cap01.ExemploCompletoTerminado aprendiz = todosAprendizes.get(indice);
+            cap01.ExemploCompletoTerminado aprendiz = todosAprendizes.get(indice);
 
             System.out.print("💪 Quantos pontos de experiência adicionar? ");
             int pontos = scanner.nextInt();
@@ -316,7 +316,7 @@ public class ExemploCompletoTerminado {
         int nivelMaioririno = 0;
         String aprendizMaisExperiente = "";
 
-        for (Cap01.ExemploCompletoTerminado aprendiz : todosAprendizes) {
+        for (cap01.ExemploCompletoTerminado aprendiz : todosAprendizes) {
             somaIdes += aprendiz.getIdade();
             somaNiveis += aprendiz.getNivelHabilidade();
 

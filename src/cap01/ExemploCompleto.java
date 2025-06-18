@@ -8,7 +8,7 @@
  */
 
 // 2. DECLARAÇÃO DE PACKAGE (Opcional para arquivos simples)
-package Cap01;
+package cap01;
 
 // 3. IMPORTS (Importações de bibliotecas externas)
 import java.time.LocalDateTime;
