@@ -91,8 +91,8 @@ Este projeto também representa meu compromisso com minha **transição de carre
 ## 🌐 Links Importantes
 
 - 📘 Acesse o eBook em PDF: [**Clique aqui**](./ebook-java-witcher.pdf)
-- 💼 Conecte-se comigo no LinkedIn: [linkedin.com/in/weritonpetreca](https://www.linkedin.com/in/weritonpetreca)
-- 🧙 Repositório oficial: [github.com/weritonpetreca/ebook-java-gwent](https://github.com/weritonpetreca/ebook-java-gwent)
+- 💼 Conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/weriton-petreca/)
+- 🧙 Conheça também meu catálogo de cartas de [Gwent](https://github.com/weritonpetreca/Gwent_Catalog)
 
 ---
 
