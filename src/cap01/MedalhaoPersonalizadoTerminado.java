@@ -2,15 +2,15 @@ package cap01;
 
 /**
  * MedalhaoPersonalizado.java
- *
+ * <p>
  * Primeiro projeto prático - Criação de um medalhão interativo
  * que representa a identidade única de cada desenvolvedor Java iniciante.
- *
+ * <p>
  * Este programa demonstra:
  * - Entrada e saída de dados com validação robusta
  * - Variáveis e tipos de dados
  * - Estruturas condicionais e de repetição
- * - Operações com strings
+ * - Operações com Strings
  * - Formatação de saída
  * - Sistema de pontuação
  * - Personalização avançada
@@ -130,20 +130,54 @@ public class MedalhaoPersonalizadoTerminado {
         }
 
         // Getters para acesso aos pontos individuais
-        public int getPontosEscola() { return pontosEscola; }
-        public int getPontosSinal() { return pontosSinal; }
-        public int getPontosHoras() { return pontosHoras; }
-        public int getPontosCor() { return pontosCor; }
-        public int getBonusCombinacao() { return bonusCombinacao; }
-        public int getBonusPersonalizacao() { return bonusPersonalizacao; }
+        public int getPontosEscola() {
+            return pontosEscola;
+        }
+
+        public int getPontosSinal() {
+            return pontosSinal;
+        }
+
+        public int getPontosHoras() {
+            return pontosHoras;
+        }
+
+        public int getPontosCor() {
+            return pontosCor;
+        }
+
+        public int getBonusCombinacao() {
+            return bonusCombinacao;
+        }
+
+        public int getBonusPersonalizacao() {
+            return bonusPersonalizacao;
+        }
 
         // Setters para definir pontuações
-        public void setPontosEscola(int pontos) { this.pontosEscola = pontos; }
-        public void setPontosSinal(int pontos) { this.pontosSinal = pontos; }
-        public void setPontosHoras(int pontos) { this.pontosHoras = pontos; }
-        public void setPontosCor(int pontos) { this.pontosCor = pontos; }
-        public void setBonusCombinacao(int bonus) { this.bonusCombinacao = bonus; }
-        public void setBonusPersonalizacao(int bonus) { this.bonusPersonalizacao = bonus; }
+        public void setPontosEscola(int pontos) {
+            this.pontosEscola = pontos;
+        }
+
+        public void setPontosSinal(int pontos) {
+            this.pontosSinal = pontos;
+        }
+
+        public void setPontosHoras(int pontos) {
+            this.pontosHoras = pontos;
+        }
+
+        public void setPontosCor(int pontos) {
+            this.pontosCor = pontos;
+        }
+
+        public void setBonusCombinacao(int bonus) {
+            this.bonusCombinacao = bonus;
+        }
+
+        public void setBonusPersonalizacao(int bonus) {
+            this.bonusPersonalizacao = bonus;
+        }
     }
 
     // ===== MÉTODO PRINCIPAL =====
@@ -240,7 +274,7 @@ public class MedalhaoPersonalizadoTerminado {
                 /*Aguarda até que o usuário pressione Enter
                  Como o System.in.read() consome apenas um único caractere, e quando pressionamos Enter ele manda
                  tanto um '\r' quanto um '\n', rodamos ele até consumir o '\n' (quebra de linha) e não afetar
-                 a proxima leitura do Scanner.*/
+                 a próxima leitura do Scanner.*/
             }
         } catch (IOException e) {
             // Ignora erro de I/O na pausa
@@ -457,40 +491,32 @@ public class MedalhaoPersonalizadoTerminado {
      */
     public static String escolherEstiloBorda(Scanner entrada) {
         System.out.println("\n🖼️ ESTILOS DE BORDA DISPONÍVEIS:");
-        System.out.println("   1. ═══ Simples - Clean e minimalista");
-        System.out.println("   2. ║││ Dupla - Elegante e forte");
-        System.out.println("   3. ▓▓▓ Ornamentada - Rica em detalhes");
-        System.out.println("   4. ✦✦✦ Mística - Símbolos mágicos");
-        System.out.println("   5. ♦♦♦ Real - Fit para reis");
+        System.out.println("   ═══ Simples - Clean e minimalista");
+        System.out.println("   ║││ Dupla - Elegante e forte");
+        System.out.println("   ▓▓▓ Ornamentada - Rica em detalhes");
+        System.out.println("   ✦✦✦ Mística - Símbolos mágicos");
+        System.out.println("   ♦♦♦ Real - Feita para reis");
         System.out.println();
 
         while (true) {
-            System.out.print("🎯 Escolha o estilo (1-5): ");
+            System.out.print("🎯 Escolha o estilo da borda: ");
+            String borda = entrada.nextLine().toLowerCase().trim();
 
-            try {
-                int escolha = entrada.nextInt();
-                entrada.nextLine(); // Consumir quebra de linha
-
-                String estilo = switch (escolha) {
-                    case 1 -> "simples";
-                    case 2 -> "dupla";
-                    case 3 -> "ornamentada";
-                    case 4 -> "mística";
-                    case 5 -> "real";
-                    default -> null;
-                };
-
-                if (estilo != null) {
-                    System.out.println("✅ Estilo escolhido: " + capitalizar(estilo));
-                    return estilo;
-                } else {
-                    System.out.println("⚠️ Digite um número entre 1 e 5!");
-                }
-
-            } catch (InputMismatchException e) {
-                System.out.println("⚠️ Por favor, digite apenas números!");
-                entrada.nextLine(); // Limpar entrada inválida
+            // Validação: entrada vazia
+            if (borda.isEmpty()) {
+                System.out.println("⚠️ Por favor, digite a borda desejada!");
+                continue;
             }
+
+            // Validação: borda válida
+            if (BORDAS_VALIDAS.contains(borda)) {
+                System.out.println("✅ Borda escolhida: " + capitalizar(borda));
+                return borda;
+            }
+
+            // Feedback para entrada inválida
+            System.out.println("⚠️ Borda não disponível!");
+            System.out.println("💡 Opções válidas: " + String.join(", ", BORDAS_VALIDAS));
         }
     }
 
@@ -1061,12 +1087,12 @@ public class MedalhaoPersonalizadoTerminado {
         System.out.println();
 
         System.out.println("🔮 PRÓXIMOS PASSOS NA JORNADA:");
-        System.out.println("   📖 Capítulo 2: 'Os Ingredientes das Poções'");
-        System.out.println("      └─ Tipos de dados primitivos em Java");
-        System.out.println("   📖 Capítulo 3: 'Receitas Básicas de Alquimia'");
-        System.out.println("      └─ Operadores e expressões");
-        System.out.println("   📖 Capítulo 4: 'Estruturas de Decisão'");
-        System.out.println("      └─ Estruturas condicionais (if, switch)");
+        System.out.println("   📖 Capítulo 2: 'A Anatomia do Bruxo'");
+        System.out.println("      └─ Fundamentos da Linguagem Java");
+        System.out.println("   📖 Capítulo 3: 'Os Cinco Sinais Fundamentais'");
+        System.out.println("      └─ Estruturas de Controle de Fluxo");
+        System.out.println("   📖 Capítulo 4: 'O Arsenal do Bruxo'");
+        System.out.println("      └─ Arrays e Coleções");
         System.out.println();
 
         System.out.println("💡 DICAS PARA CONTINUAR:");

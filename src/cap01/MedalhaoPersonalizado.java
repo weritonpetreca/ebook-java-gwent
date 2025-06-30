@@ -9,8 +9,10 @@ package cap01;
  * - Entrada e saída de dados
  * - Variáveis e tipos de dados
  * - Estruturas condicionais
- * - Operações com strings
+ * - Operações com Strings
  * - Formatação de saída
+ * @author Weriton L. Petreca
+ * @version 2.0 - Versão Inicial
  */
 
 import java.util.Scanner;

@@ -2,8 +2,8 @@
 /**
  * Nome do Arquivo: ExemploCompleto.java
  * Propósito: Demonstrar estrutura completa de classe Java
- * Autor: [Seu Nome]
- * Data: [Data de Criação]
+ * Autor: [Weriton L. Petreca]
+ * Data: [2025-06-13]
  * Versão: 1.0
  */
 
@@ -33,7 +33,7 @@ public class ExemploCompletoTerminado {
     private int idade;
 
     // 7. CONSTANTES (Variáveis estáticas finais)
-    public static final String ESCOLA = "Kaer Morhen";
+    public static final String ESCOLA = "Java Kaer Morhen";
     public static final int IDADE_MINIMA = 16;
     public static final int NIVEL_MAXIMO = 100;
 
@@ -82,7 +82,7 @@ public class ExemploCompletoTerminado {
         exibirCabecalho();
 
         // Criando instância da classe com dados pré-definidos
-        cap01.ExemploCompletoTerminado aprendiz = new cap01.ExemploCompletoTerminado("Geralt", 99, "Kaer Morhen", 95);
+        ExemploCompletoTerminado aprendiz = new ExemploCompletoTerminado("Geralt", 99, "Kaer Morhen", 95);
         todosAprendizes.add(aprendiz);
 
         System.out.println("🎯 Demonstração com aprendiz pré-cadastrado:");
@@ -194,7 +194,7 @@ public class ExemploCompletoTerminado {
         }
 
         // Criar novo aprendiz e adicionar à lista
-        cap01.ExemploCompletoTerminado novoAprendiz = new cap01.ExemploCompletoTerminado(nome, nivel, escola, idade);
+        ExemploCompletoTerminado novoAprendiz = new ExemploCompletoTerminado(nome, nivel, escola, idade);
         todosAprendizes.add(novoAprendiz);
 
         System.out.println("\n✅ Aprendiz cadastrado com sucesso!");
@@ -283,7 +283,7 @@ public class ExemploCompletoTerminado {
             scanner.nextLine(); // Consumir quebra de linha
 
             int nivelAnterior = aprendiz.getNivelHabilidade();
-            int novoNivel = Math.min(nivelAnterior + pontos, NIVEL_MAXIMO);
+            int novoNivel = Math.min(nivelAnterior + pontos, NIVEL_MAXIMO); // Retorna o nível máximo permitido caso ultrapasse
 
             aprendiz.setNivelHabilidade(novoNivel);
 
@@ -313,15 +313,15 @@ public class ExemploCompletoTerminado {
         int totalAprendizes = todosAprendizes.size();
         int somaIdes = 0;
         int somaNiveis = 0;
-        int nivelMaioririno = 0;
+        int nivelMaiorTodos = 0;
         String aprendizMaisExperiente = "";
 
         for (cap01.ExemploCompletoTerminado aprendiz : todosAprendizes) {
             somaIdes += aprendiz.getIdade();
             somaNiveis += aprendiz.getNivelHabilidade();
 
-            if (aprendiz.getNivelHabilidade() > nivelMaioririno) {
-                nivelMaioririno = aprendiz.getNivelHabilidade();
+            if (aprendiz.getNivelHabilidade() > nivelMaiorTodos) {
+                nivelMaiorTodos = aprendiz.getNivelHabilidade();
                 aprendizMaisExperiente = aprendiz.getNomeAprendiz();
             }
         }
@@ -333,7 +333,7 @@ public class ExemploCompletoTerminado {
         System.out.println("🎂 Idade média: " + String.format("%.1f", idadeMedia) + " anos");
         System.out.println("⭐ Nível médio: " + String.format("%.1f", nivelMedio));
         System.out.println("🏆 Aprendiz mais experiente: " + aprendizMaisExperiente +
-                " (Nível " + nivelMaioririno + ")");
+                " (Nível " + nivelMaiorTodos + ")");
         System.out.println("🏰 Data do relatório: " + LocalDateTime.now());
     }
 
