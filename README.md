@@ -40,13 +40,10 @@ Todos os capítulos foram escritos com auxílio de IA, com revisão técnica e p
 
 🤖 **Ferramentas de IA Utilizadas**
 
-- **ChatGPT (OpenAI)**: Apoio na redação técnica, estruturação de capítulos, insights pedagógicos e revisões.
-- **DALL·E / Midjourney**: Geração de ilustrações em estilo medieval para dar vida ao conteúdo e criar ambientação.
-- **Grammarly & LanguageTool**: Revisão ortográfica e aprimoramento linguístico.
+- **ChatGPT (OpenAI) e Perplexity**: Apoio na redação técnica, estruturação de capítulos, insights pedagógicos, revisões e geração de ilustrações.
 
 🛠️ **Edição e Design**  
-- **Canva & Figma** para o layout do eBook
-- **VS Code** como editor de códigos e snippets
+- **Power Point** para o layout do eBook
 - **IntelliJ IDEA** para testes e validações dos códigos Java
 
 ---
@@ -68,7 +65,7 @@ O aprendizado é dividido em 4 níveis, cada um com missão, treinamento e desaf
 
 📂 Todos os exemplos de código e projetos práticos estão neste repositório:
 
-> 🔗 [`/codigo`](./codigo)
+> 🔗 [`/codigo`](https://github.com/weritonpetreca/ebook-java-witcher)
 
 Inclui:
 - Códigos comentados
@@ -90,7 +87,7 @@ Este projeto também representa meu compromisso com minha **transição de carre
 
 ## 🌐 Links Importantes
 
-- 📘 Acesse o eBook em PDF: [**Clique aqui**](./ebook-java-witcher.pdf)
+- 📘 Acesse o eBook em PDF: [**Clique aqui**](https://github.com/weritonpetreca/ebook-java-witcher/blob/main/ebook%20java-witcher-cap01.pdf) (No momento apeas o Cap 01)
 - 💼 Conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/weriton-petreca/)
 - 🧙 Conheça também meu catálogo de cartas de [Gwent](https://github.com/weritonpetreca/Gwent_Catalog)
 
